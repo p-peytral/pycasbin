@@ -88,9 +88,6 @@ class CoreEnforcer:
     def init_with_model_and_adapter(self, m, adapter=None):
         """initializes an enforcer with a model and a database adapter."""
 
-        if not isinstance(m, Model) or adapter is not None and not isinstance(adapter, Adapter):
-            raise RuntimeError("Invalid parameters for enforcer.")
-
         self.adapter = adapter
 
         self.model = m
